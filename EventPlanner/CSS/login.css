@@ -1,0 +1,118 @@
+body {
+    background: linear-gradient(90deg, #e4fff6 0%, #e4fff6 20%, #bd95ee 100%, #cdd3ff 80%, #ffdcf1 100%);
+}
+
+.logo {
+    width: 150px;
+    display: block;
+    margin: auto;
+}
+
+.container {
+    max-width: 1000px; /* Adjust the maximum width as needed */
+    box-shadow: 0px 0px 8px 2px rgba(0, 0, 0, 0.547);
+    border-radius: 20px;
+    margin: 50px auto; /* Adjust the margin to center the container vertically */
+}
+
+.main {
+    background-color: rgb(255, 255, 255);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    box-shadow: 0px 0px 100px 2px rgb(44, 170, 237) inset;
+    transition: 0.3s ease-in-out;
+}
+
+.main:hover {
+    box-shadow: 0px 0px 25px 2px rgb(36, 128, 178) inset;
+    transition: 0.3s ease-in-out;
+}
+
+input {
+    outline: none;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid rgb(200, 106, 219);
+    width: 100%;
+}
+
+.form-group {
+    height: 60px;
+}
+
+label {
+    position: relative;
+    font-size: 16px;
+    color: rgb(58, 58, 58);
+    top: 18px;
+    left: 5px;
+    transition: .3s;
+    z-index: -1;
+}
+
+.label-selected {
+    position: relative;
+    font-size: 12px;
+    color: rgb(82, 82, 82);
+    top: 5px;
+    left: 5px;
+}
+
+button {
+    border: none;
+    background-color:  rgb(217, 131, 240);
+    color: #000;
+    font-weight: 500;
+    padding: 10px;
+    width: 100px;
+    border-radius: 30px;
+    margin-left: 75%;
+    transition: .5s;
+    transform: translate(0px, 0px);
+}
+
+button:hover {
+    box-shadow: 0px 8px 15px -10px rgb(61, 61, 61);
+    transform: translate(0px, -px);
+}
+
+.links {
+    font-size: 14px;
+}
+
+#overlay {
+    background-color: #ffff;
+    height: 500px;
+    width: 80%;
+    max-width: 500px; /* Adjust the maximum width as needed */
+    position: absolute;
+    transform: translate(0, -25px);
+    border-radius: 20px;
+    background-image: url(/img/img_photos.jpg);
+    transition: .5s;
+    box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.549);
+}
+
+@media only screen and (max-width: 480px) {
+    body {
+        background-color: lightblue;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    #overlay,
+    #signUp {
+        display: none;
+    }
+
+    button {
+        margin-left: 85%;
+        
+    }
+}
+
+.display-heading {
+    font-size: 40px;
+}
