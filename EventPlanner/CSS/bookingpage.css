@@ -180,45 +180,45 @@ select option {
     .custom-container {
       width: 90%;
       margin-top: 100px;
-       /* Adjust the width for smaller screens */
+
     }
   
     .two-elements-in-one-line {
-      flex-direction: column; /* Stack elements vertically on smaller screens */
-      gap: 15px; /* Reduce the gap between elements */
+      flex-direction: column; 
+      gap: 15px; 
     }
   
     .two-elements-in-one-line .input-half {
-      width: 100%; /* Full width for each input on smaller screens */
+      width: 100%;
     }
   
     .two-buttons-in-one-line {
-      flex-direction: column; /* Stack buttons vertically on smaller screens */
-      gap: 20px; /* Reduce the gap between buttons */
+      flex-direction: column; 
+      gap: 20px; 
     }
   
     .clearButton, .submitButton {
-      width: 100%; /* Full width for buttons on smaller screens */
+      width: 100%; 
     }
   }
 
   @media only screen and (max-width: 1240px) {
     .custom-container {
-      width: 80%; /* Adjust the width as needed for smaller screens */
+      width: 80%; 
     }
   
     .two-elements-in-one-line {
-      flex-direction: column; /* Stack elements vertically on smaller screens */
+      flex-direction: column;
       gap: 15px;
     }
   
     .two-buttons-in-one-line {
-      flex-direction: column; /* Stack buttons vertically on smaller screens */
+      flex-direction: column; 
       gap: 20px;
     }
   
     .clearButton, .submitButton {
-      width: 100%; /* Make buttons full width on smaller screens */
+      width: 100%;
     }
   }
   
