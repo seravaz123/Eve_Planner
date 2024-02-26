@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Event Booking Form</title>
+  <link rel="stylesheet" href="/CSS/nav.css">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=WindSong&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="/CSS/bookingpage.css">
+  <script src="/JS/bookingpage.js"></script>
+</head>
+
+<body>
+  <div class="mainContainer" id="mainContainer">
+
+    <ul class="navlist">
+      <li class="navitems"><img src="/img/logo.png" alt="Logo" class="logo"></li>
+      <li class="navitems"><a href="" class="home">E
+
+          ve-Planner</a></li>
+      <li class="navitems"><a href="" class="login">Login</a></li>
+      <li class="navitems"><button data-bs-toggle="offcanvas" data-bs-target="#offcanvasMenu"
+          aria-controls="offcanvasMenu" class="menubtn"><img src="/img/menu.svg" alt="no iamge"
+            class="menu_button"></button></li>
+    </ul>
+
+    <div class="offcanvas offcanvas-end" data-bs-backdrop="static" tabindex="-1" id="offcanvasMenu"
+      aria-labelledby="offcanvasMenuLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasMenu"><img class="pfp" src="/img/logo.png" alt="pfp here"><span
+            class="profileName" id="profileName">Skygazer</span></h5>
+        <button type="button" class="closebtn" data-bs-dismiss="offcanvas" aria-label="Close" id="closebtn">X</button>
+      </div>
+      <div class="offcanvas-body">
+        <div class="canvasItem">
+          <button class="mngProfile" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvaspfp"
+            aria-controls="offcanvaspfp">Manage your Account</button>
+        </div>
+        <hr>
+        <div class="canvasItem">
+          <a href="">Events</a>
+        </div>
+        <hr>
+        <div class="canvasItem">
+          <a href="">Ratings</a>
+        </div>
+        <hr>
+        <div class="canvasItem">
+          <a href="">About Us</a>
+        </div>
+        <hr>
+        <div class="canvasItem">
+          <a href="">Contact US</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvaspfp" aria-labelledby="offcanvaspfpLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvaspfpLabel">Edit Profile</h5>
+        <button type="button" class="closebtn" data-bs-toggle="offcanvas" data-bs-target="#offcanvaspfp"
+          aria-controls="offcanvaspfp">X</button>
+      </div>
+      <div class="offcanvas-body small">
+        <div class="pfpdiv">
+          <button class="changepfp">
+            <img src="../images/defaultpfp.jpeg" alt="no photo" class="pfpchange"><br>
+            <span class="pfptxt" onclick="openpfp()">Change profile photo <img src="../images/edit.svg"
+                alt="no photo"></span>
+            <div class="popup" id="pfpPopup">
+              <form action="">
+                <table>
+                  <tr>
+                    <td colspan="2"><input class="inppfp" type="file" id="pfp" name="pfp" accept="image/*"></td>
+                  </tr>
+                  <tr>
+                    <td><button class="cancelpfp" onclick="closepfp()">Cancel</button></td>
+                    <td><button class="subpfp">Submit</button></td>
+                  </tr>
+                </table>
+              </form>
+            </div>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- FORM -->
+  <div class="custom-container">
+    <div class="title">Let's Make An Event</div>
+    <div>
+      <p style="font-weight: 100;">Please fill out this form, and we will get back to you shortly</p>
+    </div>
+
+    <div class="user-details">
+
+      <div class="two-elements-in-one-line">
+        <div class="input-half">
+          <label class="details">First Name</label>
+          <input type="text" name="firstName" id="firstName">
+        </div>
+
+        <div class="input-half">
+          <label class="details">Last Name</label>
+          <input type="text" name="lastName" id="lastName">
+        </div>
+      </div>
+      <div class="two-elements-in-one-line">
+        <div class="input-half">
+          <label class="details">Email</label>
+          <input type="email" name="email" id="userEmail">
+        </div>
+
+        <div class="input-half">
+          <label class="details">Phone Number</label>
+          <input type="tel" name="phoneNumber" id="userPhone">
+        </div>
+      </div>
+      <div class="two-elements-in-one-line">
+        <div class="input-half">
+          <label for="evetype" class="details">Event Type</label>
+          <select name="evetype" id="evetype">
+            <option value="select">Select</option>
+            <option value="wedding">Wedding</option>
+            <option value="private">Private</option>
+            <option value="corporate">Corporate</option>
+          </select>
+        </div>
+
+        <div class="input-half">
+          <label for="venue" class="details">Venue</label>
+          <select name="venue" id="venue">
+            <option value="select">Select</option>
+            <option value="own">Own</option>
+            <option value="affiliated">Affiliated</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="input-box">
+        <label for="date" class="details">Date</label>
+        <input type="date" name="eventDate">
+      </div>
+
+      <div class="input-box">
+        <label for="guests" class="details">Number of Guests</label>
+        <input type="number" name="numberOfGuests">
+      </div>
+      <div class="input-half">
+        <label for="venue" class="details">Communication Method</label>
+        <select name="venue" id="venue">
+          <option value="select">Select</option>
+          <option value="own">Video Conference</option>
+          <option value="affiliated">Meeting at Office</option>
+          <option value="own">On-Site Meeting</option>
+        </select>
+      </div>
+      <div class="two-elements-in-one-line">
+        <div class="input-half">
+          <label for="startTime" class="details">Start Time</label>
+          <input type="time" id="startTime" name="startTime" id="startTime">
+        </div>
+        <div class="input-half">
+          <label for="endTime" class="details">End Time</label>
+          <input type="time" name="endTime" id="endTime">
+        </div>
+      </div>
+
+      <div class="input-box">
+        <label for="services" class="details" id="Services">Services</label>
+        <div class="checkbox-group">
+          <label><input type="checkbox" name="service" id="invitations">Invitations</label>
+          <label><input type="checkbox" name="service" id="decoration">Decoration</label>
+          <label><input type="checkbox" name="service" id="light_audio">Light & Audio</label>
+          <label><input type="checkbox" name="service" id="food_beverage">Food & Beverage</label>
+          <label><input type="checkbox" name="service" id="photography">Photography</label>
+        </div>
+      </div>
+
+      <div class="input-box">
+        <label for="additionalComments" class="details">Additional Comments</label>
+        <textarea name="additionalComments" id="additionalComments" cols="60" rows="5"></textarea>
+      </div>
+
+    </div>
+    <div class="two-buttons-in-one-line">
+      <button type="reset" id="clearButton" class="clearButton">Clear</button>
+      <button id="submitButton" class="submitButton" onclick="onSubmit()">Submit</button>
+    </div>
+
+  </div>
+</body>
+
+</html>
